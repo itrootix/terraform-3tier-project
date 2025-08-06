@@ -166,7 +166,7 @@ resource "aws_instance" "appserver1" {
   ami                    = "ami-0492447090ced6eb5"
   instance_type          = "t2.micro"
   availability_zone      = "ap-south-1a"
-  key_name               = "MyKey"
+  key_name               = "4pmbatch2"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
   subnet_id              = aws_subnet.application-subnet-1.id
   tags = {
