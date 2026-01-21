@@ -135,7 +135,7 @@ resource "aws_route_table_association" "b" {
 #Create EC2 Instance
 resource "aws_instance" "webserver1" {
   ami                    = "ami-0492447090ced6eb5"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   availability_zone      = "ap-south-1a"
   key_name               = "4pmbatch2"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
@@ -149,7 +149,7 @@ resource "aws_instance" "webserver1" {
 
 resource "aws_instance" "webserver2" {
   ami                    = "ami-0492447090ced6eb5"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   availability_zone      = "ap-south-1b"
   key_name               = "4pmbatch2"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
@@ -164,7 +164,7 @@ resource "aws_instance" "webserver2" {
 #Create EC2 Instance
 resource "aws_instance" "appserver1" {
   ami                    = "ami-0492447090ced6eb5"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   availability_zone      = "ap-south-1a"
   key_name               = "4pmbatch2"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
@@ -176,7 +176,7 @@ resource "aws_instance" "appserver1" {
 
 resource "aws_instance" "appserver2" {
   ami                    = "ami-0492447090ced6eb5"
-  instance_type          = "t2.micro"
+  instance_type          = "t3.micro"
   availability_zone      = "ap-south-1b"
   key_name               = "4pmbatch2"
   vpc_security_group_ids = [aws_security_group.appserver-sg.id]
